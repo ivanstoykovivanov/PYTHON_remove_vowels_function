@@ -1,11 +1,7 @@
 def disemvowel(word):
-    word_as_list = list(word)
+    word = word.lower()
     vowels = ["a" , "e", "i", "o", "u"]
-    for char in word_as_list:
-        for v in vowels : 
-            if char == v : 
-                word_as_list.remove(v)
-    return "".join(word_as_list)  
-        
+    return "".join([char for char in word if char not in vowels])  
 
-print(disemvowel("apple"))
+print( disemvowel("Aaaaron"))
+
